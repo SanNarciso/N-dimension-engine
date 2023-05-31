@@ -434,10 +434,6 @@ functional
 cmath
 -
 
-C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/RayCast.h
-Entities.h
-C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/Entities.h
-
 C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Exceptions/math_exceptions.cpp
 iostream
 -
@@ -463,6 +459,6 @@ C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project
 C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/testing.cpp
 gtest/gtest.h
 -
-../../lib/Engine/RayCast.h
-C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/RayCast.h
+../../lib/Engine/Entities.h
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/Entities.h
 

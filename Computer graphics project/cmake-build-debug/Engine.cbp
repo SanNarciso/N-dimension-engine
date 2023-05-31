@@ -417,9 +417,6 @@
 		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/Entities.h">
 			<Option target="Engine_lib"/>
 		</Unit>
-		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/RayCast.h">
-			<Option target="Engine_run"/>
-		</Unit>
 		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Exceptions/engine_exceptions.h">
 			<Option target="Engine_lib"/>
 		</Unit>

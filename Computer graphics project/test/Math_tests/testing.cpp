@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../lib/Engine/RayCast.h"
+#include "../../lib/Engine/Entities.h"
 class MatrixTest : public ::testing::Test {
 public:
 
@@ -204,18 +204,10 @@ TEST(VectorTest, CrossProduct){
     }
 }
 
-
-TEST(RAYCASTING, RayCastConstructfov){
-    RayCast ray;
-    EXPECT_EQ(ray.cam.fov, M_PI/3);
+TEST(RayCast, RayMatrix_LOOK_AT){
+    Entities::Game::Camera cam(60, Point(), INT_MAX);
+    cam.position.print();
 }
-
-
-TEST(RAYCASTING, RayCastConstructDirection){
-    RayCast ray;
-    EXPECT_EQ(ray.directive.length, 1);
-}
-
 
 
 //int main(){

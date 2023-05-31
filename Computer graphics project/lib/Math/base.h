@@ -582,7 +582,8 @@ class Point{
 public:
     vector<double> coordinates;
     Point(Vector v = Vector()){
-        coordinates = v.coordinates_in_basis;
+        // before any invokation of CoordinateSystem we need
+        coordinates = v.coordinates;
     }
 
     Point operator+(Vector v) {
@@ -596,6 +597,10 @@ public:
     Point operator= (Point pt){
         (*this).coordinates = pt.coordinates;
         return (*this);
+    }
+
+    void print(){
+        for (auto i : coordinates) cout << i << endl;
     }
 };
 
