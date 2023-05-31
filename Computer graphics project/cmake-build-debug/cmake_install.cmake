@@ -1,8 +1,8 @@
-# Install script for directory: C:/University/IV/Computer graphics project
+# Install script for directory: C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/______")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Engine")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,12 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/University/IV/Computer graphics project/cmake-build-debug/Engine/cmake_install.cmake")
+  include("C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/cmake_install.cmake")
+  include("C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/University/IV/Computer graphics project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

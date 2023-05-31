@@ -66,10 +66,10 @@ RM = "D:\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\University\IV\Computer graphics project"
+CMAKE_SOURCE_DIR = "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\University\IV\Computer graphics project\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -144,14 +144,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\University\IV\Computer graphics project\cmake-build-debug\CMakeFiles" "C:\University\IV\Computer graphics project\cmake-build-debug\test\Math_tests\lib\googletest\\CMakeFiles\progress.marks"
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\University\IV\Computer graphics project\cmake-build-debug\CMakeFiles" 0
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\CMakeFiles" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\test\Math_tests\lib\googletest\\CMakeFiles\progress.marks"
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/clean
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/clean
 .PHONY : clean
 
 # The main clean target
@@ -161,22 +161,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/preinstall
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/preinstall
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/rule:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/rule
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/rule
 .PHONY : test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -186,12 +186,12 @@ gtest: test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/rule
 
 # fast build rule for target.
 gtest/fast:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/build
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 # Convenience name for target.
 test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/rule:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/rule
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/rule
 .PHONY : test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ gtest_main: test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/rule
 
 # fast build rule for target.
 gtest_main/fast:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/build
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 src/gtest-all.obj: src/gtest-all.cc.obj
@@ -210,7 +210,7 @@ src/gtest-all.obj: src/gtest-all.cc.obj
 
 # target to build an object file
 src/gtest-all.cc.obj:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
 .PHONY : src/gtest-all.cc.obj
 
 src/gtest-all.i: src/gtest-all.cc.i
@@ -219,7 +219,7 @@ src/gtest-all.i: src/gtest-all.cc.i
 
 # target to preprocess a source file
 src/gtest-all.cc.i:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
 .PHONY : src/gtest-all.cc.i
 
 src/gtest-all.s: src/gtest-all.cc.s
@@ -228,7 +228,7 @@ src/gtest-all.s: src/gtest-all.cc.s
 
 # target to generate assembly for a file
 src/gtest-all.cc.s:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
 .PHONY : src/gtest-all.cc.s
 
 src/gtest_main.obj: src/gtest_main.cc.obj
@@ -237,7 +237,7 @@ src/gtest_main.obj: src/gtest_main.cc.obj
 
 # target to build an object file
 src/gtest_main.cc.obj:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj
 .PHONY : src/gtest_main.cc.obj
 
 src/gtest_main.i: src/gtest_main.cc.i
@@ -246,7 +246,7 @@ src/gtest_main.i: src/gtest_main.cc.i
 
 # target to preprocess a source file
 src/gtest_main.cc.i:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
 .PHONY : src/gtest_main.cc.i
 
 src/gtest_main.s: src/gtest_main.cc.s
@@ -255,7 +255,7 @@ src/gtest_main.s: src/gtest_main.cc.s
 
 # target to generate assembly for a file
 src/gtest_main.cc.s:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f test\Math_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make test/Math_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
 .PHONY : src/gtest_main.cc.s
 
 # Help Target
@@ -289,6 +289,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

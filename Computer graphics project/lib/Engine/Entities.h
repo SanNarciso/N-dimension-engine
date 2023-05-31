@@ -20,6 +20,7 @@ namespace Entities{
         Vector direction;
         Ray(CoordinateSystem cs, Point initial_pt, Vector dir) {
             coord_sys = cs;
+            cs.basis.get_basis_coordinates(dir);
             initial_point = initial_pt;
             direction = dir;
         }
@@ -152,6 +153,7 @@ namespace Entities{
             Point position;
             Vector direction;
             Object(Point pos = Point(), Vector dir = Vector()) {
+                cs.basis.get_basis_coordinates(dir);
                 dir = dir/dir.length;
                 (*this).set_property("Position", pos);
                 (*this).set_property("Direction", dir);
@@ -164,8 +166,8 @@ namespace Entities{
             }
 
             void planar_rotate(int axis_1, int axis_2, float angle) {
-                this->direction = Matrix::planar_rotation(axis_1, axis_2, angle)*direction;
-                this->position = Point(((Matrix::planar_rotation(axis_1, axis_2, angle)*Vector(position.coordinates)).transpose()).matrix[0]);
+                this->direction = Matrix::planar_rotation(axis_1, axis_2, angle, angle)*direction;
+                this->position = Point(((Matrix::planar_rotation(axis_1, axis_2, angle, angle)*Vector(position.coordinates)).transpose()).matrix[0]);
             }
 
             void rotate_3d(vector<int> angles) {
@@ -188,7 +190,7 @@ namespace Entities{
             float vfov;
             float draw_distance;
             Point look_at;
-            Camera(float fov, float draw_distance)
+            Camera(float fov = 60, float draw_distance = INT_MAX)
                     : fov(toRadians(fov)), vfov(calculateVFOV(fov)), draw_distance(draw_distance) {}
 
             Camera(float fov, float vfov, float draw_distance)

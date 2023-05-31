@@ -8,33 +8,33 @@
 		<Option virtualFolders="CMake Files\;CMake Files\Engine\;CMake Files\test\;CMake Files\test\Math_tests\;CMake Files\test\Math_tests\lib\;CMake Files\test\Math_tests\lib\googlemock\;CMake Files\test\Math_tests\lib\googlemock\cmake\;CMake Files\test\Math_tests\lib\googletest\;CMake Files\test\Math_tests\lib\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Engine_run">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/Engine_run.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir=""/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine_run.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -43,20 +43,20 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 Engine_run"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 Engine_run"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Engine_run/fast">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/Engine_run.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir=""/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine_run.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -65,70 +65,70 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 Engine_run/fast"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 Engine_run/fast"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Engine_lib">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/Engine/libEngine_lib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/Engine"/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/libEngine_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -137,20 +137,20 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 Engine_lib"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 Engine_lib"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Engine_lib/fast">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/Engine/libEngine_lib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/Engine"/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/libEngine_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -159,22 +159,22 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 Engine_lib/fast"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 Engine_lib/fast"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Google_Tests_run">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/Google_Tests_run.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir=""/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/Google_Tests_run.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -183,22 +183,22 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 Google_Tests_run"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 Google_Tests_run"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Google_Tests_run/fast">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/Google_Tests_run.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir=""/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/Google_Tests_run.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -207,24 +207,24 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 Google_Tests_run/fast"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 Google_Tests_run/fast"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock"/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -233,24 +233,24 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main/fast">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock"/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -259,24 +259,24 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/lib/libgmock.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock"/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/lib/libgmock.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -285,24 +285,24 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock/fast">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/lib/libgmock.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock"/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/lib/libgmock.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -311,22 +311,22 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest"/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -335,22 +335,22 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest"/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -359,22 +359,22 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest"/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -383,22 +383,22 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest"/>
+				<Option output="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/University/IV/Computer graphics project/Engine"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/include"/>
-					<Add directory="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -407,80 +407,80 @@
 					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/University/IV/Computer graphics project/lib/Engine/Entities.h">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/Entities.h">
 			<Option target="Engine_lib"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/lib/Engine/RayCast.h">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/RayCast.h">
 			<Option target="Engine_run"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/lib/Exceptions/engine_exceptions.h">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Exceptions/engine_exceptions.h">
 			<Option target="Engine_lib"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/lib/Exceptions/math_exceptions.cpp">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Exceptions/math_exceptions.cpp">
 			<Option target="Engine_lib"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/lib/Math/base.h">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Math/base.h">
 			<Option target="Engine_lib"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/main.cpp">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/main.cpp">
 			<Option target="Engine_run"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock/src/gmock-all.cc">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock/src/gmock_main.cc">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock/src/gmock_main.cc">
 			<Option target="gmock_main"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/src/gtest-all.cc">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/src/gtest_main.cc">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/testing.cpp">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/testing.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/CMakeLists.txt">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/Engine/CMakeLists.txt">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Engine\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/CMakeLists.txt">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\Math_tests\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/CMakeLists.txt">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\Math_tests\lib\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock/CMakeLists.txt">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\Math_tests\lib\googlemock\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock/cmake/gmock.pc.in">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\test\Math_tests\lib\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\test\Math_tests\lib\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/CMakeLists.txt">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\Math_tests\lib\googletest\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/cmake/Config.cmake.in">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/cmake/Config.cmake.in">
 			<Option virtualFolder="CMake Files\test\Math_tests\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/cmake/gtest.pc.in">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\test\Math_tests\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\test\Math_tests\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="C:/University/IV/Computer graphics project/test/Math_tests/lib/googletest/cmake/internal_utils.cmake">
+		<Unit filename="C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\test\Math_tests\lib\googletest\cmake\"/>
 		</Unit>
 	</Project>

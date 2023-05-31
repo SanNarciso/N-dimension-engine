@@ -66,10 +66,10 @@ RM = "D:\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\University\IV\Computer graphics project"
+CMAKE_SOURCE_DIR = "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\University\IV\Computer graphics project\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -144,14 +144,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\University\IV\Computer graphics project\cmake-build-debug\CMakeFiles" "C:\University\IV\Computer graphics project\cmake-build-debug\Engine\\CMakeFiles\progress.marks"
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Engine/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\University\IV\Computer graphics project\cmake-build-debug\CMakeFiles" 0
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\CMakeFiles" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\Engine\\CMakeFiles\progress.marks"
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Engine/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Engine/clean
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Engine/clean
 .PHONY : clean
 
 # The main clean target
@@ -161,22 +161,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Engine/preinstall
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Engine/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Engine/preinstall
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Engine/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Engine/CMakeFiles/Engine_lib.dir/rule:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Engine/CMakeFiles/Engine_lib.dir/rule
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Engine/CMakeFiles/Engine_lib.dir/rule
 .PHONY : Engine/CMakeFiles/Engine_lib.dir/rule
 
 # Convenience name for target.
@@ -186,7 +186,7 @@ Engine_lib: Engine/CMakeFiles/Engine_lib.dir/rule
 
 # fast build rule for target.
 Engine_lib/fast:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Engine\CMakeFiles\Engine_lib.dir\build.make Engine/CMakeFiles/Engine_lib.dir/build
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Engine\CMakeFiles\Engine_lib.dir\build.make Engine/CMakeFiles/Engine_lib.dir/build
 .PHONY : Engine_lib/fast
 
 __/lib/Exceptions/math_exceptions.obj: __/lib/Exceptions/math_exceptions.cpp.obj
@@ -195,7 +195,7 @@ __/lib/Exceptions/math_exceptions.obj: __/lib/Exceptions/math_exceptions.cpp.obj
 
 # target to build an object file
 __/lib/Exceptions/math_exceptions.cpp.obj:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Engine\CMakeFiles\Engine_lib.dir\build.make Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.obj
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Engine\CMakeFiles\Engine_lib.dir\build.make Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.obj
 .PHONY : __/lib/Exceptions/math_exceptions.cpp.obj
 
 __/lib/Exceptions/math_exceptions.i: __/lib/Exceptions/math_exceptions.cpp.i
@@ -204,7 +204,7 @@ __/lib/Exceptions/math_exceptions.i: __/lib/Exceptions/math_exceptions.cpp.i
 
 # target to preprocess a source file
 __/lib/Exceptions/math_exceptions.cpp.i:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Engine\CMakeFiles\Engine_lib.dir\build.make Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.i
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Engine\CMakeFiles\Engine_lib.dir\build.make Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.i
 .PHONY : __/lib/Exceptions/math_exceptions.cpp.i
 
 __/lib/Exceptions/math_exceptions.s: __/lib/Exceptions/math_exceptions.cpp.s
@@ -213,7 +213,7 @@ __/lib/Exceptions/math_exceptions.s: __/lib/Exceptions/math_exceptions.cpp.s
 
 # target to generate assembly for a file
 __/lib/Exceptions/math_exceptions.cpp.s:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Engine\CMakeFiles\Engine_lib.dir\build.make Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.s
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Engine\CMakeFiles\Engine_lib.dir\build.make Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.s
 .PHONY : __/lib/Exceptions/math_exceptions.cpp.s
 
 # Help Target
@@ -243,6 +243,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

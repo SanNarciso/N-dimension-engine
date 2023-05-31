@@ -61,10 +61,10 @@ RM = "D:\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\University\IV\Computer graphics project"
+CMAKE_SOURCE_DIR = "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\University\IV\Computer graphics project\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include test/Math_tests/CMakeFiles/Google_Tests_run.dir/depend.make
@@ -78,16 +78,16 @@ include test/Math_tests/CMakeFiles/Google_Tests_run.dir/flags.make
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: test/Math_tests/CMakeFiles/Google_Tests_run.dir/flags.make
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: test/Math_tests/CMakeFiles/Google_Tests_run.dir/includes_CXX.rsp
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: ../test/Math_tests/testing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\University\IV\Computer graphics project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj"
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\test\MATH_T~1 && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Google_Tests_run.dir\testing.cpp.obj -c "C:\University\IV\Computer graphics project\test\Math_tests\testing.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj"
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\test\MATH_T~1 && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Google_Tests_run.dir\testing.cpp.obj -c "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\test\Math_tests\testing.cpp"
 
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/testing.cpp.i"
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\test\MATH_T~1 && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\University\IV\Computer graphics project\test\Math_tests\testing.cpp" > CMakeFiles\Google_Tests_run.dir\testing.cpp.i
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\test\MATH_T~1 && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\test\Math_tests\testing.cpp" > CMakeFiles\Google_Tests_run.dir\testing.cpp.i
 
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/testing.cpp.s"
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\test\MATH_T~1 && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\University\IV\Computer graphics project\test\Math_tests\testing.cpp" -o CMakeFiles\Google_Tests_run.dir\testing.cpp.s
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\test\MATH_T~1 && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\test\Math_tests\testing.cpp" -o CMakeFiles\Google_Tests_run.dir\testing.cpp.s
 
 # Object files for target Google_Tests_run
 Google_Tests_run_OBJECTS = \
@@ -105,8 +105,8 @@ test/Math_tests/Google_Tests_run.exe: lib/libgtest.a
 test/Math_tests/Google_Tests_run.exe: test/Math_tests/CMakeFiles/Google_Tests_run.dir/linklibs.rsp
 test/Math_tests/Google_Tests_run.exe: test/Math_tests/CMakeFiles/Google_Tests_run.dir/objects1.rsp
 test/Math_tests/Google_Tests_run.exe: test/Math_tests/CMakeFiles/Google_Tests_run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\University\IV\Computer graphics project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Google_Tests_run.exe"
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\test\MATH_T~1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Google_Tests_run.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Google_Tests_run.exe"
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\test\MATH_T~1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Google_Tests_run.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/build: test/Math_tests/Google_Tests_run.exe
@@ -114,10 +114,10 @@ test/Math_tests/CMakeFiles/Google_Tests_run.dir/build: test/Math_tests/Google_Te
 .PHONY : test/Math_tests/CMakeFiles/Google_Tests_run.dir/build
 
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/clean:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\test\MATH_T~1 && $(CMAKE_COMMAND) -P CMakeFiles\Google_Tests_run.dir\cmake_clean.cmake
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\test\MATH_T~1 && $(CMAKE_COMMAND) -P CMakeFiles\Google_Tests_run.dir\cmake_clean.cmake
 .PHONY : test/Math_tests/CMakeFiles/Google_Tests_run.dir/clean
 
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\University\IV\Computer graphics project" "C:\University\IV\Computer graphics project\test\Math_tests" "C:\University\IV\Computer graphics project\cmake-build-debug" "C:\University\IV\Computer graphics project\cmake-build-debug\test\Math_tests" "C:\University\IV\Computer graphics project\cmake-build-debug\test\Math_tests\CMakeFiles\Google_Tests_run.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\test\Math_tests" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\test\Math_tests" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\test\Math_tests\CMakeFiles\Google_Tests_run.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : test/Math_tests/CMakeFiles/Google_Tests_run.dir/depend
 

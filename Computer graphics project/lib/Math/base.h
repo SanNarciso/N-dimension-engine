@@ -261,7 +261,7 @@ public:
         return Matrix(3,3, {{cos(alpha),-sin(alpha),0},{sin(alpha), cos(alpha), 0}, {0, 0, 1}});
     }
 
-    static Matrix planar_rotation(int axis_1, int axis_2, double alpha){
+    static Matrix planar_rotation(int axis_1, int axis_2, double alpha, double beta){
         Matrix first_rotation;
         Matrix second_rotation;
         switch(axis_1){
@@ -277,13 +277,13 @@ public:
 
         switch (axis_2) {
             case 0:
-                second_rotation = rotation_x(alpha);
+                second_rotation = rotation_x(beta);
             case 1:
-                second_rotation = rotation_y(alpha);
+                second_rotation = rotation_y(beta);
             case 2:
-                second_rotation = rotation_z(alpha);
+                second_rotation = rotation_z(beta);
             default:
-                second_rotation = rotation_x(alpha);
+                second_rotation = rotation_x(beta);
         }
         return first_rotation*second_rotation;
     }
@@ -355,6 +355,8 @@ public:
         Matrix result = Matrix::operator*(a);
         return get_column(result, 0);
     }
+
+    Vector operator*(Vector v);
 
     Vector operator- (Vector v){
         Matrix result = Matrix::operator-(v);
@@ -490,7 +492,7 @@ public:
     vector<Vector> basis_vectors;
     Matrix basis_vectors_matrix;
     BilinearForm scalar_prod;
-    int dimension_of_vector_space = 0;
+    int dimension_of_vector_space = 3;
     Matrix Gramm;
 
     EuclidSpace(vector<Vector> elements = {Vector({1,0,0}), Vector({0,1,0}), Vector({0,0,1})}, BilinearForm sp = BilinearForm()){

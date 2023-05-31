@@ -61,10 +61,10 @@ RM = "D:\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\University\IV\Computer graphics project"
+CMAKE_SOURCE_DIR = "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\University\IV\Computer graphics project\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include Engine/CMakeFiles/Engine_lib.dir/depend.make
@@ -78,16 +78,16 @@ include Engine/CMakeFiles/Engine_lib.dir/flags.make
 Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.obj: Engine/CMakeFiles/Engine_lib.dir/flags.make
 Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.obj: Engine/CMakeFiles/Engine_lib.dir/includes_CXX.rsp
 Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.obj: ../lib/Exceptions/math_exceptions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\University\IV\Computer graphics project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.obj"
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\Engine && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Engine_lib.dir\__\lib\Exceptions\math_exceptions.cpp.obj -c "C:\University\IV\Computer graphics project\lib\Exceptions\math_exceptions.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.obj"
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\Engine && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Engine_lib.dir\__\lib\Exceptions\math_exceptions.cpp.obj -c "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\lib\Exceptions\math_exceptions.cpp"
 
 Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.i"
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\Engine && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\University\IV\Computer graphics project\lib\Exceptions\math_exceptions.cpp" > CMakeFiles\Engine_lib.dir\__\lib\Exceptions\math_exceptions.cpp.i
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\Engine && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\lib\Exceptions\math_exceptions.cpp" > CMakeFiles\Engine_lib.dir\__\lib\Exceptions\math_exceptions.cpp.i
 
 Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.s"
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\Engine && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\University\IV\Computer graphics project\lib\Exceptions\math_exceptions.cpp" -o CMakeFiles\Engine_lib.dir\__\lib\Exceptions\math_exceptions.cpp.s
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\Engine && D:\MinGW\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\lib\Exceptions\math_exceptions.cpp" -o CMakeFiles\Engine_lib.dir\__\lib\Exceptions\math_exceptions.cpp.s
 
 # Object files for target Engine_lib
 Engine_lib_OBJECTS = \
@@ -99,9 +99,9 @@ Engine_lib_EXTERNAL_OBJECTS =
 Engine/libEngine_lib.a: Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.obj
 Engine/libEngine_lib.a: Engine/CMakeFiles/Engine_lib.dir/build.make
 Engine/libEngine_lib.a: Engine/CMakeFiles/Engine_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\University\IV\Computer graphics project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libEngine_lib.a"
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\Engine && $(CMAKE_COMMAND) -P CMakeFiles\Engine_lib.dir\cmake_clean_target.cmake
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\Engine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Engine_lib.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libEngine_lib.a"
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\Engine && $(CMAKE_COMMAND) -P CMakeFiles\Engine_lib.dir\cmake_clean_target.cmake
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\Engine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Engine_lib.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Engine/CMakeFiles/Engine_lib.dir/build: Engine/libEngine_lib.a
@@ -109,10 +109,10 @@ Engine/CMakeFiles/Engine_lib.dir/build: Engine/libEngine_lib.a
 .PHONY : Engine/CMakeFiles/Engine_lib.dir/build
 
 Engine/CMakeFiles/Engine_lib.dir/clean:
-	cd /d C:\UNIVER~1\IV\COMPUT~1\CMAKE-~1\Engine && $(CMAKE_COMMAND) -P CMakeFiles\Engine_lib.dir\cmake_clean.cmake
+	cd /d C:\UNIVER~1\IV\N-DIME~1\N-DIME~1\COMPUT~1\CMAKE-~1\Engine && $(CMAKE_COMMAND) -P CMakeFiles\Engine_lib.dir\cmake_clean.cmake
 .PHONY : Engine/CMakeFiles/Engine_lib.dir/clean
 
 Engine/CMakeFiles/Engine_lib.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\University\IV\Computer graphics project" "C:\University\IV\Computer graphics project\Engine" "C:\University\IV\Computer graphics project\cmake-build-debug" "C:\University\IV\Computer graphics project\cmake-build-debug\Engine" "C:\University\IV\Computer graphics project\cmake-build-debug\Engine\CMakeFiles\Engine_lib.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\Engine" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\Engine" "C:\University\IV\N-dimension-engine\N-dimension-engine\Computer graphics project\cmake-build-debug\Engine\CMakeFiles\Engine_lib.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : Engine/CMakeFiles/Engine_lib.dir/depend
 

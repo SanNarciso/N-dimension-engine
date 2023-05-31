@@ -23,6 +23,7 @@ test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: ../test/Math_te
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: ../test/Math_tests/lib/googletest/include/gtest/internal/gtest-string.h
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: ../test/Math_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: ../lib/Engine/Entities.h
+test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: ../lib/Engine/RayCast.h
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: ../lib/Exceptions/math_exceptions.cpp
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: ../lib/Math/base.h
 test/Math_tests/CMakeFiles/Google_Tests_run.dir/testing.cpp.obj: ../test/Math_tests/testing.cpp

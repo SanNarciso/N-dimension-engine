@@ -1,8 +1,8 @@
-# Install script for directory: C:/University/IV/Computer graphics project/test/Math_tests
+# Install script for directory: C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/test/Math_tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/______")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Engine")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/University/IV/Computer graphics project/cmake-build-debug/test/Math_tests/lib/cmake_install.cmake")
+  include("C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/test/Math_tests/lib/cmake_install.cmake")
 endif()
 

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/University/IV/Computer graphics project/lib/Exceptions/math_exceptions.cpp" "C:/University/IV/Computer graphics project/cmake-build-debug/Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.obj"
+  "C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Exceptions/math_exceptions.cpp" "C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/cmake-build-debug/Engine/CMakeFiles/Engine_lib.dir/__/lib/Exceptions/math_exceptions.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,6 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../lib/Engine/Entities.h"
-
+#include "../../lib/Engine/RayCast.h"
 class MatrixTest : public ::testing::Test {
 public:
 
@@ -229,7 +228,18 @@ TEST(VectorTest, CrossProduct){
 //    EXPECT_EQ(entity.properties.empty(), true);
 //}
 
-int main(){
-    testing::InitGoogleTest();
-    RUN_ALL_TESTS();
+
+TEST(RAYCASTING, RayCastConstruct){
+    /*
+     * HERE IS A PROBLEM OCCURED:
+     * each time we create a coordinate system, we need to get its basis coordinates to assign a value to field length in this Vector class instance
+     */
+    RayCast ray;
+    cout << ray.cam.fov;
 }
+
+
+//int main(){
+//    testing::InitGoogleTest();
+//    RUN_ALL_TESTS();
+//}

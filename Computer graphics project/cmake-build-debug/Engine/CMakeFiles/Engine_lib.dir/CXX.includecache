@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/University/IV/Computer graphics project/lib/Exceptions/math_exceptions.cpp
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Exceptions/math_exceptions.cpp
 iostream
 -
 string

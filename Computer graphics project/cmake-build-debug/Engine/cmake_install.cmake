@@ -1,8 +1,8 @@
-# Install script for directory: C:/University/IV/Computer graphics project/Engine
+# Install script for directory: C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/______")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Engine")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
