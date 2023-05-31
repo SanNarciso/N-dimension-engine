@@ -3,9 +3,9 @@
 class MatrixTest : public ::testing::Test {
 public:
 
-    Matrix matrix_1;
-    Matrix matrix_2;
-    Matrix matrix_3;
+    Matrix matrix_1 = Matrix(3,3);
+    Matrix matrix_2 = Matrix(3,3);
+    Matrix matrix_3 = Matrix(3,3);
 };
 
 
@@ -205,38 +205,17 @@ TEST(VectorTest, CrossProduct){
 }
 
 
-//TEST(EntityTest, EntitySetPropertyTest){
-//    Entities::Entity entity;
-//    entity.set_property(map<string, int> {{"entity_property_function_test", 0}});
-//    map<string, int>::iterator it = entity.properties.begin();
-//    EXPECT_EQ(it->first, "entity_property_function_test");
-//    EXPECT_EQ(it->second, 0);
-//}
-
-//TEST(EntityTest, EntityGetPropertyTest){
-//    Entities::Entity entity;
-//    entity.set_property(map<string, int> {{"entity_property_function_test", 0}});
-//    map<string, int>::iterator it = entity.properties.begin();
-//    EXPECT_EQ(entity.get_property("entity_property_function_test"), 0);
-//}
-
-//TEST(EntityTest, EntityRemovePropertyTest){
-//    Entities::Entity entity;
-//    entity.set_property(map<string, int> {{"entity_property_function_test", 0}});
-//    map<string, int>::iterator it = entity.properties.begin();
-//    entity.remove_property("entity_property_function_test");
-//    EXPECT_EQ(entity.properties.empty(), true);
-//}
-
-
-TEST(RAYCASTING, RayCastConstruct){
-    /*
-     * HERE IS A PROBLEM OCCURED:
-     * each time we create a coordinate system, we need to get its basis coordinates to assign a value to field length in this Vector class instance
-     */
+TEST(RAYCASTING, RayCastConstructfov){
     RayCast ray;
-    cout << ray.cam.fov;
+    EXPECT_EQ(ray.cam.fov, M_PI/3);
 }
+
+
+TEST(RAYCASTING, RayCastConstructDirection){
+    RayCast ray;
+    EXPECT_EQ(ray.directive.length, 1);
+}
+
 
 
 //int main(){

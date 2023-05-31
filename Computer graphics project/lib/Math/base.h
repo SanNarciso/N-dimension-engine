@@ -28,13 +28,24 @@ public:
 
     vector<vector<double>> matrix;
 
-    Matrix(int rows = 3, int cols = 3, vector<vector<double>> vals = {{1,0,0}, {0,1,0}, {0,0,1}}){
+    Matrix(int rows, int cols, vector<vector<double>> vals){
         n = rows;
         m = cols;
         matrix = vector<vector<double>> (n, vector<double> (m, 0));
         for (int i = 0; i < n; ++i){
             for (int j = 0; j < m; ++j){
                 matrix[i][j] = vals[i][j];
+            }
+        }
+    }
+
+    Matrix(int rows, int cols){
+        n = rows;
+        m = cols;
+        matrix = vector<vector<double>> (n, vector<double>(m,0));
+        for (int i = 0; i < n; ++i){
+            for (int j = 0; j < m; ++j){
+                if (i == j) matrix[i][j] = 1;
             }
         }
     }
@@ -262,8 +273,8 @@ public:
     }
 
     static Matrix planar_rotation(int axis_1, int axis_2, double alpha, double beta){
-        Matrix first_rotation;
-        Matrix second_rotation;
+        Matrix first_rotation(3,3);
+        Matrix second_rotation(3,3);
         switch(axis_1){
             case 0:
                 first_rotation = rotation_x(alpha);
@@ -323,14 +334,14 @@ public:
      *      vector with coordinates (a_1, a_2, a_3) in basis {(1,0,0, 0), (0,1,0,0), (0,0,1,0), (0,0,0,1)} has coordinates_in_basis = (a_1, a_2, a_3, 0)
      */
 
-    Vector(int size = 3) : Matrix(size, 1){
+    Vector(int size = 3) : Matrix(size, 1, vector<vector<double>>(size, vector<double>(1, 1))){
         dim = size;
         for (int i = 0; i < size; ++i){
             coordinates.push_back(matrix[i][0]);
         }
     }
 
-    Vector (vector<double> coords) : Matrix(coords.size(), 1){
+    Vector (vector<double> coords) : Matrix(coords.size(), 1, vector<vector<double>>(coords.size(),coords)){
         dim = coords.size();
         for (int i = 0; i < coords.size(); ++i){
             coordinates.push_back(coords[i]);
@@ -347,25 +358,39 @@ public:
     }
 
     Vector operator+ (Vector v){
-        Matrix result = Matrix::operator+(v);
-        return get_column(result, 0);
+        Vector result((*this).dim);
+        for (int i = 0; i < (*this).dim; ++i){
+            result.coordinates[i] = (*this).coordinates[i] + v.coordinates[i];
+            result.matrix[i][0] = (*this).coordinates[i] + v.coordinates[i];
+        }
+        return result;
     }
 
     Vector operator* (double a){
-        Matrix result = Matrix::operator*(a);
-        return get_column(result, 0);
+        Vector result((*this).coordinates);
+        for (int i = 0; i < (*this).dim; ++i){
+            result.coordinates[i] *= a;
+            result.matrix[i][0] *= a;
+        }
+        return result;
     }
 
-    Vector operator*(Vector v);
-
     Vector operator- (Vector v){
-        Matrix result = Matrix::operator-(v);
-        return get_column(result, 0);
+        Vector result((*this).dim);
+        for (int i = 0; i < (*this).dim; ++i){
+            result.coordinates[i] = (*this).coordinates[i] - v.coordinates[i];
+            result.matrix[i][0] = (*this).coordinates[i] - v.coordinates[i];
+        }
+        return result;
     }
 
     Vector operator/ (double a){
-        Matrix result = Matrix::operator/(a);
-        return get_column(result, 0);
+        Vector result((*this).coordinates);
+        for (int i = 0; i < (*this).dim; ++i){
+            result.coordinates[i] /= a;
+            result.matrix[i][0] /= a;
+        }
+        return result;
     }
 
 
@@ -441,18 +466,17 @@ private:
 
 class BilinearForm{
 public:
-//    double result = 0;
     bool symmetric = false;
     bool positive_defined = false;
-    Matrix B_mat;
-    Matrix B_mat_in_basis;                      // ONLY WHEN BASIS APPEARS
+    Matrix B_mat = Matrix(3, 3);
+    Matrix B_mat_in_basis = Matrix(3, 3);                      // ONLY WHEN BASIS APPEARS
 
     double evaluate(Vector v1, Vector v2, Matrix M){
         Matrix res = v1.transpose() * M * v2;
         return res.matrix[0][0];
     }
 
-    BilinearForm(Vector v1 = Vector(), Vector v2 = Vector(), Matrix M = Matrix(), int dim = 3){
+    BilinearForm(Vector v1 = Vector(), Vector v2 = Vector(), Matrix M = Matrix(3,3), int dim = 3){
         if (M.n != M.m || dim != M.n){
             throw BilinearException("incorrect matrix or dim for building bilinear from");
         }
@@ -469,11 +493,9 @@ public:
         double temp3 = ceil(evaluate(v1,v2, M) + evaluate(v1,v3, M));
         double temp4 = ceil(evaluate(v1*alpha,v2*beta, M));
         double temp5 = ceil(alpha*beta*evaluate(v1,v2, M));
-        if (temp0 == temp1 && temp2 == temp3 && temp4 == temp5) {
-            //result = evaluate(v1, v2, M);
-            B_mat = M;
-        }
-        else{
+        B_mat = M;
+        if (!(temp0 == temp1 && temp2 == temp3 && temp4 == temp5)) {
+            B_mat = Matrix(dim,dim);
             throw BilinearException("Bad matrix for bilinear form: does not satisfy axioms");
         }
 
@@ -490,10 +512,10 @@ public:
 class EuclidSpace{
 public:
     vector<Vector> basis_vectors;
-    Matrix basis_vectors_matrix;
+    Matrix basis_vectors_matrix = Matrix(3,3);
     BilinearForm scalar_prod;
     int dimension_of_vector_space = 3;
-    Matrix Gramm;
+    Matrix Gramm = Matrix(3,3);
 
     EuclidSpace(vector<Vector> elements = {Vector({1,0,0}), Vector({0,1,0}), Vector({0,0,1})}, BilinearForm sp = BilinearForm()){
         dimension_of_vector_space = elements.size();

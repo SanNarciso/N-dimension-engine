@@ -154,11 +154,12 @@ namespace Entities{
             Vector direction;
             Object(Point pos = Point(), Vector dir = Vector()) {
                 cs.basis.get_basis_coordinates(dir);
-                dir = dir/dir.length;
+                Vector normalized_dir((dir/dir.length).coordinates);
+                cs.basis.get_basis_coordinates(normalized_dir);
                 (*this).set_property("Position", pos);
-                (*this).set_property("Direction", dir);
+                (*this).set_property("Direction", normalized_dir);
                 position = pos;
-                direction = dir;
+                direction = normalized_dir;
             }
 
             void move(Vector direction) {
