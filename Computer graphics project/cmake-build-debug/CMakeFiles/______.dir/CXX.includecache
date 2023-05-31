@@ -1,0 +1,78 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest.h
+cstddef
+-
+cstdint
+-
+iomanip
+-
+limits
+-
+memory
+-
+ostream
+-
+set
+-
+sstream
+-
+string
+-
+type_traits
+-
+vector
+-
+gtest/gtest-assertion-result.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/gtest-assertion-result.h
+gtest/gtest-death-test.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/gtest-death-test.h
+gtest/gtest-matchers.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/gtest-matchers.h
+gtest/gtest-message.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/gtest-message.h
+gtest/gtest-param-test.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/gtest-param-test.h
+gtest/gtest-printers.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/gtest-printers.h
+gtest/gtest-test-part.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/gtest-test-part.h
+gtest/gtest-typed-test.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/gtest-typed-test.h
+gtest/gtest_pred_impl.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/gtest_pred_impl.h
+gtest/gtest_prod.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/gtest_prod.h
+gtest/internal/gtest-internal.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/internal/gtest-internal.h
+gtest/internal/gtest-string.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest/internal/gtest-string.h
+
+C:/University/IV/Computer graphics project/Google_tests/tests.cpp
+../main.cpp
+C:/University/IV/Computer graphics project/main.cpp
+lib/googletest/include/gtest/gtest.h
+C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include/gtest/gtest.h
+../main.cpp
+C:/University/IV/Computer graphics project/main.cpp
+
+C:/University/IV/Computer graphics project/main.cpp
+iostream
+-
+cmath
+-
+vector
+-
+algorithm
+-
+string
+-
+random
+-
+

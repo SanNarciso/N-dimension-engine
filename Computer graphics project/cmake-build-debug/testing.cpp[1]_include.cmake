@@ -1,0 +1,5 @@
+if(EXISTS "C:/University/IV/Computer graphics project/cmake-build-debug/testing.cpp[1]_tests.cmake")
+  include("C:/University/IV/Computer graphics project/cmake-build-debug/testing.cpp[1]_tests.cmake")
+else()
+  add_test(testing.cpp_NOT_BUILT testing.cpp_NOT_BUILT)
+endif()

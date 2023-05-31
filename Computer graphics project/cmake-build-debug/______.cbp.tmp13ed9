@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="______"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="______">
+				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/______.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 ______"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="______/fast">
+				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/______.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 ______/fast"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Google_Tests_run">
+				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/Google_Tests_run.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/Computer graphics project/Google_tests/lib/googletest"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 Google_Tests_run"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Google_Tests_run/fast">
+				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/Google_Tests_run.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/Computer graphics project/Google_tests/lib/googletest"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 Google_Tests_run/fast"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main">
+				<Option output="C:/University/IV/Computer graphics project/cmake-build-debug/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/lib/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/University/IV/Computer graphics project/Google_tests/lib/googlemock/include"/>
+					<Add directory="C:/University/IV/Computer graphics project/Google_tests/lib/googlemock"/>
+					<Add directory="C:/University/IV/Computer graphics project/Google_tests/lib/googletest/include"/>
+					<Add directory="C:/University/IV/Computer graphics project/Google_tests/lib/googletest"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/University/IV/Computer graphics project/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main/fast">
+				<Option output="C:/University/IV/Computer graphics project/cmak
