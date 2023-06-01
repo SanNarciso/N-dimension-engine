@@ -247,10 +247,57 @@ namespace Entities {
 
 
         class HyperEllipsoid : public Game::Object {
-            Point position; Vector direction; vector<double> semiaxes;
-            HyperEllipsoid(Point pos, Vector dir, vector<double> ss){
+            Point position; Vector direction; vector<Vector> semiaxes;
+
+            HyperEllipsoid(Point pos, Vector dir, vector<Vector> ss){
                 (*this).set_property("Position", pos);
-                (*this).set_property("")
+                (*this).set_property("Direction", dir);
+                (*this).set_property("Semiaxes", semiaxes);
+                position = pos; direction = dir; semiaxes = ss;
+            }
+
+            void rotate_3d(double alpha, double beta, double gamma){
+                Vector new_direction((((Matrix::rotation_x(alpha)*Matrix::rotation_y(beta)*Matrix::rotation_z(gamma))*direction).transpose()).matrix[0]);
+                (*this).set_property("Direction", new_direction);
+                for (int i = 0; i < semiaxes.size(); ++i){
+                    semiaxes[i] = Vector(((((Matrix::rotation_x(alpha)*Matrix::rotation_y(beta)*Matrix::rotation_z(gamma))*semiaxes[i]).transpose()).matrix[0]));
+                }
+                (*this).set_property("Semiaxes", semiaxes);
+            }
+
+            double intersection_distance(Ray r){
+                double A = 0;
+                double B = 0;
+                double C = 0;
+                for (int i = 0; i < cs.basis.dimension_of_vector_space; ++i){
+                    A += pow(r.initial_point.coordinates[i]/semiaxes[i].coordinates[i],2);              // here we just expect that ellipsoid is in its canon basis
+                    B += (2*r.direction.coordinates[i]*r.initial_point.coordinates[i]) / pow(semiaxes[i].coordinates[i],2);
+                    C += pow(r.initial_point.coordinates[i] / semiaxes[i].coordinates[i], 2);
+                }
+                if ((B - 4*A*(C-1)) < 0){
+                    throw RayExceptions("No intersaection");
+                }
+                double found_t = min((-B + sqrt(B - 4*A*(C-1)))/(2*A), (-B - sqrt(B - 4*A*(C-1)))/(2*A));
+                Vector intersection_point((r.initial_point + r.direction*found_t).coordinates);
+                Vector diff(intersection_point.dim);
+                for (int i = 0; i < diff.dim; ++i){
+                    diff.coordinates[i] = intersection_point.coordinates[i] - r.initial_point.coordinates[i];
+                }
+                cs.basis.get_basis_coordinates(diff);
+                return diff.length;
+            }
+        };
+
+        // where to add Entities to EntitiesList?
+        class Canvas {
+        public:
+            int n,m;
+            Matrix distances;
+
+            Canvas(int nn, int mm){
+                distances = Matrix(n,m);
+                n = nn; m = mm;
+
             }
         };
 
@@ -301,9 +348,11 @@ namespace Entities {
                     for (int j = 0; j < m; ++j) {
                         Vector v_i_j((((Matrix::rotation_z(alpha_i[i]) * Matrix::rotation_y(beta_j[j])) *
                                        direction).transpose()).matrix[0]);
+                        cs.basis.get_basis_coordinates(v_i_j);
                         Vector _v_i_j = v_i_j * (pow(direction.length, 2) /
                                                  ((direction.transpose() * cs.basis.Gramm * v_i_j).matrix[0][0]));
                         //A[i][j].direction = _v_i_j;
+                        cs.basis.get_basis_coordinates(_v_i_j);
                         A[i][j] = Ray(cs, position, _v_i_j);
                     }
                 }
