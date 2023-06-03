@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 project(Engine)
 
 set(CMAKE_CXX_STANDARD 20)
-add_executable(${CMAKE_PROJECT_NAME}_run main.cpp)
+add_executable(${CMAKE_PROJECT_NAME}_run main.cpp config/default.h)
 
 # set this flag when running coverage tests in Clion
 #set(CMAKE_CXX_FLAGS "--coverage")

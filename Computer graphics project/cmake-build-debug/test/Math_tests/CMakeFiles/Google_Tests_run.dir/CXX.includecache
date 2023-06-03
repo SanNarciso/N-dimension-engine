@@ -414,6 +414,12 @@ cxxabi.h
 acxx_demangle.h
 -
 
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine/EventSystem.h
+vector
+-
+string
+-
+
 C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/Entities.h
 set
 -
@@ -461,4 +467,6 @@ gtest/gtest.h
 -
 ../../lib/Engine/Entities.h
 C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/Entities.h
+../../Engine/EventSystem.h
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine/EventSystem.h
 

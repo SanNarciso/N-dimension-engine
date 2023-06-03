@@ -1,5 +1,7 @@
+#pragma once
 #include <gtest/gtest.h>
 #include "../../lib/Engine/Entities.h"
+#include "../../Engine/EventSystem.h"
 class MatrixTest : public ::testing::Test {
 public:
 
@@ -204,12 +206,23 @@ TEST(VectorTest, CrossProduct){
     }
 }
 
-TEST(RayCast, RayMatrix_LOOK_AT){
-    Entities::Game::Camera cam(60, Point(), INT_MAX);
-    cam.position.print();
+TEST(ScalarProd, ScalarProdTest){
+    EuclidSpace E({Vector({1,0}), Vector({0,1})}, BilinearForm(Vector({1,0}), Vector({0,1}), Matrix(2,2,{{1,0}, {0,1}}), 2));
+    Vector v1({1,0});
+    E.get_basis_coordinates(v1);
+    Vector v2({0,1});
+    E.get_basis_coordinates(v2);
+    EXPECT_EQ((v1.transpose()*E.Gramm*v2).matrix[0][0], 0);
 }
 
-
+TEST(ScalarProd, IncorrectBilinearFormMatrix){
+    //EuclidSpace E({Vector({1,0}), Vector({0,1})}, BilinearForm(Vector({1,0}), Vector({0,1}), Matrix(2,2,{{0,0}, {0,0}}), 2));
+    //Vector v1({1,0});
+    //E.get_basis_coordinates(v1);
+    //Vector v2({0,1});
+    //E.get_basis_coordinates(v2);
+    EXPECT_THROW(EuclidSpace E({Vector({1,0}), Vector({0,1})}, BilinearForm(Vector({1,0}), Vector({0,1}), Matrix(2,2,{{0,0}, {0,0}}), 2)), BilinearException);
+}
 //int main(){
 //    testing::InitGoogleTest();
 //    RUN_ALL_TESTS();

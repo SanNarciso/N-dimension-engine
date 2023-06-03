@@ -549,6 +549,7 @@ public:
 
         if (sp.symmetric && sp.positive_defined){
             scalar_prod = sp;
+            scalar_prod.B_mat_in_basis = Matrix(dimension_of_vector_space, dimension_of_vector_space);
             for (int i = 0; i < elements.size(); ++i){
                 for (int j = 0; j < elements.size(); ++j){
                     scalar_prod.B_mat_in_basis.matrix[i][j] = scalar_prod.evaluate(elements[i], elements[j], sp.B_mat);
@@ -574,7 +575,7 @@ public:
         }
 
         Vector tmp = Vector(v.coordinates_in_basis);
-        v.length = sqrt((tmp.transpose() * Gramm * tmp).matrix[0][0]);
+        v.length = sqrt((tmp.transpose() * (*this).Gramm * tmp).matrix[0][0]);
     }
 };
 
