@@ -430,13 +430,12 @@ public:
         return res;
     }
 
-    Vector& operator=(Vector v){
+    void operator=(Vector v){
         dim = v.dim;
-        length = v.length;
         coordinates = v.coordinates;
         coordinates_in_basis = v.coordinates_in_basis;
         matrix = v.matrix;
-        return (*this);
+        length = v.length;
     }
 
     Vector& operator=(Matrix v){
@@ -582,7 +581,7 @@ public:
 class Point{
 public:
     vector<double> coordinates;
-    Point(Vector v = Vector()){
+    Point(Vector v = Vector({0,0,0})){
         // before any invokation of CoordinateSystem we need
         coordinates = v.coordinates;
     }

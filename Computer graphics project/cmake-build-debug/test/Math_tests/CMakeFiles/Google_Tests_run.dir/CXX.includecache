@@ -423,6 +423,8 @@ string
 C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/Entities.h
 set
 -
+Windows.h
+-
 string
 -
 map
@@ -431,6 +433,8 @@ any
 -
 ../Math/base.h
 C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Math/base.h
+../../Engine/EventSystem.h
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine/EventSystem.h
 random
 -
 unordered_map

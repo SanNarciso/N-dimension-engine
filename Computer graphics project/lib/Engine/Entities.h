@@ -4,13 +4,15 @@
 #endif //ENGINE_ENTITIES_H
 #pragma once
 #include <set>
+#include <Windows.h>
 #include <string>
-#include "../../ncurses"
 #include <map>
 #include <any>
 #include "../Math/base.h"
 #include "../../Engine/EventSystem.h"
 #include <random>
+#include <chrono>
+#include <algorithm>
 #include <unordered_map>
 #include <functional>
 #include <cmath>
@@ -84,7 +86,7 @@ namespace Entities {
             cs = crs;
         }
 
-        virtual double intersection_distance(Ray r){return 0;}
+        virtual double intersection_distance(Ray r) {return 0;}
 
         void set_property(const std::string &prop, const any &value) {
             properties[prop] = value;
@@ -110,9 +112,9 @@ namespace Entities {
 
     class EntitiesList {
     public:
-        std::vector<Entity> entities;
+        std::vector<Entities::Entity> entities;
 
-        void append(const Entity &entity) {
+        void append(Entities::Entity entity) {
             entities.push_back(entity);
         }
 
@@ -123,7 +125,7 @@ namespace Entities {
                     entities.end());
         }
 
-        Entity *get(const Identifier<int> &id) {
+        Entities::Entity *get(const Identifier<int> &id) {
             auto it = std::find_if(entities.begin(), entities.end(),
                                    [&id](const Entity &entity) { return entity.identifier.value == id.value; });
 
@@ -134,14 +136,14 @@ namespace Entities {
             return nullptr;
         }
 
-        void exec(std::function<void(Entity &)> func) {
-            for (Entity &entity : entities) {
+        void exec(std::function<void(Entities::Entity)> func) {
+            for (Entities::Entity entity : entities) {
                 func(entity);
             }
         }
 
-        Entity &operator[](const Identifier<int> &id) {
-            Entity *entity = get(id);
+        Entities::Entity &operator[](const Identifier<int> &id) {
+            Entities::Entity *entity = get(id);
             if (entity) {
                 return *entity;
             }
@@ -149,23 +151,19 @@ namespace Entities {
         }
     };
 
-
-    EntitiesList Entities_List;
+    Entities::EntitiesList Entities_List;
 
 
     class Game {
     public:
         CoordinateSystem cs;
-        EntitiesList entities;
         EventSystem eventSystem;
-        Game(CoordinateSystem crs, EntitiesList eentities) {
+        Game(CoordinateSystem crs) {
             cs = crs;
-            Game::entities = eentities;
         }
 
-        Game(CoordinateSystem crs, EntitiesList eentities, EventSystem es){
+        Game(CoordinateSystem crs, EventSystem es){
             cs = crs;
-            Game::entities = eentities;
             eventSystem = es;
         }
 
@@ -195,6 +193,7 @@ namespace Entities {
                 (*this).set_property("Direction", normalized_dir);
                 position = pos;
                 direction = normalized_dir;
+                cs.basis.get_basis_coordinates(direction);
             }
 
             void move(Vector dir) {
@@ -229,6 +228,7 @@ namespace Entities {
 
 
 
+
         class HyperPlane : public Game::Object {
         public:
             Point position;
@@ -259,7 +259,7 @@ namespace Entities {
                 (*this).set_property("Normal vector", normal);
             }
 
-            double intersection_distance(Ray ray){
+            double intersection_distance(Ray ray) override{
                 cs.basis.get_basis_coordinates(ray.direction);
                 // if direction is parallel to the plane, it never intersects
                 if ((normal.transpose()*cs.basis.Gramm*ray.direction).matrix[0][0] == 0){
@@ -267,9 +267,11 @@ namespace Entities {
                 }
                 double t_hat = -((normal.transpose()*cs.basis.Gramm*(Vector(ray.initial_point.coordinates) - Vector((*this).position.coordinates))).matrix[0][0])/(normal.transpose()*cs.basis.Gramm*ray.direction).matrix[0][0];
                 Vector intersection = Vector(ray.initial_point.coordinates) + ray.direction*t_hat;
+                cs.basis.get_basis_coordinates(intersection);
                 Vector diff(intersection.dim);
                 for (int i = 0; i < intersection.dim; ++i){
                     diff.coordinates[i] = intersection.coordinates[i] - ray.initial_point.coordinates[i];
+                    diff.matrix[i][0] = intersection.coordinates[i] - ray.initial_point.coordinates[i];
                 }
                 cs.basis.get_basis_coordinates(diff);
                 return diff.length;
@@ -287,10 +289,11 @@ namespace Entities {
                 (*this).set_property("Semiaxes", semiaxes);
                 cs.basis.get_basis_coordinates(dir);
                 position = pos; direction = dir; semiaxes = ss;
+                cs.basis.get_basis_coordinates(direction);
                 for (auto &q : semiaxes){
                     cs.basis.get_basis_coordinates(q);
                 }
-                Entities_List.append((*this));
+                Entities_List.append((*this));   // add here
             }
 
             void rotate_3d(double alpha, double beta, double gamma){
@@ -303,24 +306,27 @@ namespace Entities {
                 (*this).set_property("Semiaxes", semiaxes);
             }
 
-            double intersection_distance(Ray r){
+             double intersection_distance(Ray r) override {
                 double A = 0;
                 double B = 0;
                 double C = 0;
                 cs.basis.get_basis_coordinates(r.direction);
                 for (int i = 0; i < cs.basis.dimension_of_vector_space; ++i){
-                    A += pow(r.initial_point.coordinates[i]/semiaxes[i].coordinates[i],2);              // here we just expect that ellipsoid is in its canon basis
-                    B += (2*r.direction.coordinates[i]*r.initial_point.coordinates[i]) / pow(semiaxes[i].coordinates[i],2);
+                    A += pow(r.direction.coordinates[i]/semiaxes[i].coordinates[i],2);              // here we just expect that ellipsoid is in its canon basis
+                    B += (2*r.direction.coordinates_in_basis[i]*r.initial_point.coordinates[i]) / pow(semiaxes[i].coordinates[i],2);
                     C += pow(r.initial_point.coordinates[i] / semiaxes[i].coordinates[i], 2);
                 }
                 if ((B - 4*A*(C-1)) < 0){
                     return -1;
                 }
                 double found_t = min((-B + sqrt(B - 4*A*(C-1)))/(2*A), (-B - sqrt(B - 4*A*(C-1)))/(2*A));
-                Vector intersection_point((r.initial_point + r.direction*found_t).coordinates);
+                Vector tmp = r.direction*found_t;
+                cs.basis.get_basis_coordinates(tmp);
+                Vector intersection_point((r.initial_point + tmp).coordinates);
                 Vector diff(intersection_point.dim);
                 for (int i = 0; i < diff.dim; ++i){
                     diff.coordinates[i] = intersection_point.coordinates[i] - r.initial_point.coordinates[i];
+                    diff.matrix[i][0] = intersection_point.coordinates[i] - r.initial_point.coordinates[i];
                 }
                 cs.basis.get_basis_coordinates(diff);
                 return diff.length;
@@ -338,16 +344,16 @@ namespace Entities {
             optional<Point> look_at;
 
             Camera(float fov = 60, float draw_distance = INT_MAX)
-                    : fov(toRadians(fov)), vfov(calculateVFOV(fov)), draw_distance(draw_distance) {Entities_List.append((*this));}
+                    : fov(toRadians(fov)), vfov(calculateVFOV(fov)), draw_distance(draw_distance) {}
 
             Camera(float fov, float vfov, float draw_distance)
-                    : fov(toRadians(fov)), vfov(toRadians(vfov)), draw_distance(draw_distance) {Entities_List.append((*this));}
+                    : fov(toRadians(fov)), vfov(toRadians(vfov)), draw_distance(draw_distance) {}
 
             Camera(float fov, Point look_at, float draw_distance)
-                    : fov(toRadians(fov)), vfov(calculateVFOV(fov)), draw_distance(draw_distance), look_at(look_at) {Entities_List.append((*this));}
+                    : fov(toRadians(fov)), vfov(calculateVFOV(fov)), draw_distance(draw_distance), look_at(look_at) {}
 
             Camera(float fov, float vfov, Point look_at, float draw_distance)
-                    : fov(toRadians(fov)), vfov(toRadians(vfov)), draw_distance(draw_distance), look_at(look_at) {Entities_List.append((*this));}
+                    : fov(toRadians(fov)), vfov(toRadians(vfov)), draw_distance(draw_distance), look_at(look_at) {}
 
 
             vector<vector<Ray>> get_rays_matrix(int n, int m) {
@@ -409,26 +415,32 @@ namespace Entities {
                 distances = Matrix(n,m);
             }
 
-            void draw(){}/// NCURSES, DRAWING EVERYTHING
+             //void draw(){}/// NCURSES, DRAWING EVERYTHING
 
-            void update(Camera cam){
+             void update(Camera cam, HyperEllipsoid object){
                 /*
                  * what is needed to be done here?
                  * first, we send rays from camera and thus get matrix with rays_from_camera
                  * then in each cell of the gained matrix we need to find intersection of the ray contained
-                 * in the current matrix cell and any Entity from Entites list, of no intersection found, set the cell eqaul to draw_distance
+                 * in the current matrix cell and any Entity from Entites list, of no intersection found, set the cell equal to draw_distance
                  */
-                vector<vector<Ray>> camera_ray_cast = cam.get_rays_matrix(n, m);
+                auto camera_ray_cast = cam.get_rays_matrix(n, m);
                 for (int i = 0; i < n; ++i){
                     for (int j = 0; j < m; ++j){
-                        for (int e = 0; e < Entities_List.entities.size(); ++e){
-                            double dist_ray_i_j = Entities_List.entities[e].intersection_distance(camera_ray_cast[i][j]);
-                            if (dist_ray_i_j != -1){
-                                distances.matrix[i][j] = dist_ray_i_j;
-                            } else {
-                                distances.matrix[i][j] = cam.draw_distance;
-                            }
-                        }
+                        // here the hard code goes in
+                        double dist_ray_i_j = object.intersection_distance(camera_ray_cast[i][j]);
+                        if (dist_ray_i_j != -1){
+                            distances.matrix[i][j] = dist_ray_i_j;
+                        } else {distances.matrix[i][j] = cam.draw_distance;}
+//                        for (Entity obj : Entities_List.entities){
+//                            auto* temp = &obj;
+//                            double dist_ray_i_j = temp->intersection_distance(camera_ray_cast[i][j]);
+//                            if (dist_ray_i_j != -1){
+//                                distances.matrix[i][j] = dist_ray_i_j;
+//                            } else {
+//                                distances.matrix[i][j] = cam.draw_distance;
+//                            }
+//                        }
                     }
                 }
             }
@@ -437,58 +449,97 @@ namespace Entities {
 
         class Console: public Canvas{
         public:
-            string charmap = ".:;><+r*zsvfwqkP694VOGbUAKXH8RD#$B0MNWQ%&@";
-            void drawObjects() {
-                initscr(); // Initialize ncurses
-                raw(); // Disable line buffering
-                keypad(stdscr, TRUE); // Enable special key handling
-                noecho(); // Don't echo input
+            static void DrawObjects(const std::vector<std::vector<double>>& distances) {
+                const int screenWidth = 100;
+                const int screenHeight = 40;
+                const std::string charMap = ".:;><+r*zsvfwqkP694VOGbUAKXH8RD#$B0MNWQ%&@";
+                // Clear the console
+                system("cls");
 
-                int rows, cols;
-                getmaxyx(stdscr, rows, cols); // Get terminal size
+                // Calculate the dimensions of each cell in the matrix
+                float cellWidth = static_cast<float>(screenWidth) / distances[0].size();
+                float cellHeight = static_cast<float>(screenHeight) / distances.size();
 
-                double maxDistance = 0.0;
-                for (const auto& row : canvas.distances) {
-                    for (double distance : row) {
-                        if (distance > maxDistance) {
-                            maxDistance = distance;
-                        }
+                // Loop through each cell in the matrix
+                for (int y = 0; y < distances.size(); ++y)
+                {
+                    for (int x = 0; x < distances[y].size(); ++x)
+                    {
+                        // Calculate the distance of the current cell
+                        float distance = distances[y][x];
+
+                        // Find the index in the character map based on the normalized distance
+                        int charIndex = static_cast<int>(distance * (charMap.length() - 1));
+
+                        // Get the character from the character map
+                        char character = charMap[charIndex];
+
+                        // Calculate the position of the current cell in the console
+                        int consoleX = static_cast<int>(x * cellWidth);
+                        int consoleY = static_cast<int>(y * cellHeight);
+
+                        // Set the cursor position in the console
+                        COORD coord;
+                        coord.X = consoleX;
+                        coord.Y = consoleY;
+                        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+
+                        // Output the character
+                        std::cout << character;
                     }
                 }
-
-                for (int i = 0; i < rows; ++i) {
-                    for (int j = 0; j < cols; ++j) {
-                        double distance = canvas.distances[i][j];
-                        char symbol;
-
-                        if (distance <= 0.0) {
-                            symbol = '#'; // Object is close
-                        } else {
-                            double normalizedDistance = distance / maxDistance;
-                            if (normalizedDistance < 0.25) {
-                                symbol = ' ';
-                            } else if (normalizedDistance < 0.5) {
-                                symbol = '.';
-                            } else if (normalizedDistance < 0.75) {
-                                symbol = '-';
-                            } else {
-                                symbol = '=';
-                            }
-                        }
-
-                        mvaddch(i, j, symbol);
-                    }
-                }
-
-                refresh(); // Refresh the screen
-                getch(); // Wait for user input
-                endwin(); // End ncurses
             }
+//            void drawObjects() {
+//                initscr(); // Initialize ncurses
+//                raw(); // Disable line buffering
+//                keypad(stdscr, TRUE); // Enable special key handling
+//                noecho(); // Don't echo input
+//
+//                int rows, cols;
+//                getmaxyx(stdscr, rows, cols); // Get terminal size
+//
+//                double maxDistance = 0.0;
+//                for (const auto& row : canvas.distances) {
+//                    for (double distance : row) {
+//                        if (distance > maxDistance) {
+//                            maxDistance = distance;
+//                        }
+//                    }
+//                }
+//
+//                for (int i = 0; i < rows; ++i) {
+//                    for (int j = 0; j < cols; ++j) {
+//                        double distance = canvas.distances[i][j];
+//                        char symbol;
+//
+//                        if (distance <= 0.0) {
+//                            symbol = '#'; // Object is close
+//                        } else {
+//                            double normalizedDistance = distance / maxDistance;
+//                            if (normalizedDistance < 0.25) {
+//                                symbol = ' ';
+//                            } else if (normalizedDistance < 0.5) {
+//                                symbol = '.';
+//                            } else if (normalizedDistance < 0.75) {
+//                                symbol = '-';
+//                            } else {
+//                                symbol = '=';
+//                            }
+//                        }
+//
+//                        mvaddch(i, j, symbol);
+//                    }
+//                }
+//
+//                refresh(); // Refresh the screen
+//                getch(); // Wait for user input
+//                endwin(); // End ncurses
+//            }
         };
 
-//        class Configuration{
-//
-//        };
+        class Configuration{
+
+        };
 
         template<typename EntityType>
         EntityType *get_entity_class() {
@@ -502,3 +553,28 @@ namespace Entities {
     };
 }
 
+
+int main(){
+    /*
+     * To create a scene, we need to:
+     * 1) create an Ellipsoid (for example), here it is added to EntitiesList
+     * 2) create a Camera
+     * 3) create a Console
+     * 4) draw
+     */
+
+    Entities::Game::HyperEllipsoid HE(Point(Vector({4,4,4})), Vector({5,5,5}), {Vector({6, 0, 0}), Vector({0, 6, 0}), Vector({0, 0, 6})});
+    //Entities::Entity* ent = &HE;
+
+    Entities::Game::Camera camera(60, INT_MAX);
+    auto q = Entities::Entities_List;
+    camera.position = Point(Vector({0,0,0}));
+    camera.direction = Vector({1,1,1});
+    camera.cs.basis.get_basis_coordinates(camera.direction);
+    vector<vector<Entities::Ray>> Q = camera.get_rays_matrix(100, 40);
+    Entities::Game::Canvas console(100,40);
+    console.update(camera, HE);
+    //cout << HP.intersection_distance(Entities::Ray(HP.cs, Point(Vector({0,0,0})), Vector({1,2,1})));
+    //console.distances.print();
+    Entities::Game::Console::DrawObjects(console.distances.matrix);
+}
