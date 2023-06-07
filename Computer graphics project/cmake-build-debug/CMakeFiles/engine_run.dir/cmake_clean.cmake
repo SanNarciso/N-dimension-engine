@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Engine_run.dir/main.cpp.obj"
+  "CMakeFiles/Engine_run.dir/main.cpp.obj.d"
   "Engine_run.exe"
   "Engine_run.exe.manifest"
   "Engine_run.pdb"

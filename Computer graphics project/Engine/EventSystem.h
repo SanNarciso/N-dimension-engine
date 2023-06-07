@@ -5,25 +5,28 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <unordered_map>
+#include <functional>
+#include <any>
 
 class EventSystem{
-    std::unordered_map<std::string, vector<std::function<any(vector<any>)>>> events;
+    std::unordered_map<std::string, vector<std::function<std::any(vector<std::any>)>>> events;
 
-    void add_and_handle(const string name, const vector<function<any(vector<any>)>> handler){
+    void add_and_handle(const std::string name, const std::vector<function<any(vector<any>)>> handler){
         events[name] = handler;
     }
 
-    void remove_and_handle(const string name){
+    void remove_and_handle(const std::string name){
         events.erase(name);
     }
 
-    void trigger(string name, vector<any> arguments){
+    void trigger(std::string name, std::vector<any> arguments){
         for (auto func: events[name]){
             func(arguments);
         }
     }
 
-    auto get_hadnler(string name){
+    auto get_hadnler(std::string name){
         return events[name];
     }
 

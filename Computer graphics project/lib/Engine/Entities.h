@@ -2,9 +2,9 @@
 #define ENGINE_ENTITIES_H
 #define ASPECT_RATIO 16/9
 #endif //ENGINE_ENTITIES_H
-#pragma once
+
 #include <set>
-#include <Windows.h>
+#include <windows.h>
 #include <string>
 #include <map>
 #include <any>
@@ -408,16 +408,18 @@ namespace Entities {
             int n;
             int m;
             Matrix distances = Matrix(1920, 1080);
-
-            Canvas(int nn = 1920, int mm = 1080) {
+            Camera cam;
+            string charmap = ".:!/r(l1Z4H9W8$@";
+            Canvas(Camera camera, int nn = 1920, int mm = 1080) {
                 n = nn;
                 m = mm;
                 distances = Matrix(n,m);
+                cam = camera;
             }
 
              //void draw(){}/// NCURSES, DRAWING EVERYTHING
 
-             void update(Camera cam, HyperEllipsoid object){
+             void update(HyperEllipsoid object){
                 /*
                  * what is needed to be done here?
                  * first, we send rays from camera and thus get matrix with rays_from_camera
@@ -444,97 +446,63 @@ namespace Entities {
                     }
                 }
             }
-        };
 
+            void createConsoleWindow(int width, int height) {
+                HWND consoleHandle = GetConsoleWindow();
+                RECT r;
+                GetWindowRect(consoleHandle, &r);
+                MoveWindow(consoleHandle, r.left, r.top, width, height, TRUE);
+            }
 
-        class Console: public Canvas{
-        public:
-            static void DrawObjects(const std::vector<std::vector<double>>& distances) {
-                const int screenWidth = 100;
-                const int screenHeight = 40;
-                const std::string charMap = ".:;><+r*zsvfwqkP694VOGbUAKXH8RD#$B0MNWQ%&@";
-                // Clear the console
-                system("cls");
+            void drawObjects(HyperEllipsoid obj) {
+                auto tp1 = chrono::system_clock::now();
+                auto tp2 = chrono::system_clock::now();
+                createConsoleWindow(m, n);
 
-                // Calculate the dimensions of each cell in the matrix
-                float cellWidth = static_cast<float>(screenWidth) / distances[0].size();
-                float cellHeight = static_cast<float>(screenHeight) / distances.size();
-
-                // Loop through each cell in the matrix
-                for (int y = 0; y < distances.size(); ++y)
+                while (1)
                 {
-                    for (int x = 0; x < distances[y].size(); ++x)
-                    {
-                        // Calculate the distance of the current cell
-                        float distance = distances[y][x];
+                    tp2 = chrono::system_clock::now();
+                    chrono::duration<float> elapsedTime = tp2 - tp1;
+                    tp1 = tp2;
+                    float fElapsedTime = elapsedTime.count();
+                    if (GetAsyncKeyState((unsigned short)'A') & 0x8000) {
+                        cam.position.coordinates[1] -= 0.75f * fElapsedTime;
+                        (*this).update(obj);
+                    }
 
-                        // Find the index in the character map based on the normalized distance
-                        int charIndex = static_cast<int>(distance * (charMap.length() - 1));
+                    // Handle CW Rotation
+                    if (GetAsyncKeyState((unsigned short)'D') & 0x8000) {
+                        cam.position.coordinates[1] += 0.75f * fElapsedTime;
+                        (*this).update(obj);
+                    }
 
-                        // Get the character from the character map
-                        char character = charMap[charIndex];
+                    // Handle Forwards movement & collision
+                    if (GetAsyncKeyState((unsigned short)'W') & 0x8000) {
+                        cam.position.coordinates[0] += 0.75f * fElapsedTime;
+                        (*this).update(obj);
+                    }
 
-                        // Calculate the position of the current cell in the console
-                        int consoleX = static_cast<int>(x * cellWidth);
-                        int consoleY = static_cast<int>(y * cellHeight);
+                    // Handle backwards movement & collision
+                    if (GetAsyncKeyState((unsigned short)'S') & 0x8000) {
+                        cam.position.coordinates[0] -= 0.75f * fElapsedTime;
+                        (*this).update(obj);
+                    }
 
-                        // Set the cursor position in the console
-                        COORD coord;
-                        coord.X = consoleX;
-                        coord.Y = consoleY;
-                        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+                    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+                    COORD cursorPosition = { 0, 0 };
+                    DWORD written;
 
-                        // Output the character
-                        std::cout << character;
+                    for (int i = 0; i < n; i++) {
+                        for (int j = 0; j < m; j++) {
+                            int index = static_cast<int>((distances.matrix[i][j] / 10.0f) * (charmap.size() - 1));
+                            char character = charmap[index];
+                            WriteConsoleA(consoleHandle, &character, 1, &written, NULL);
+                        }
+                        cursorPosition.Y++;
+                        SetConsoleCursorPosition(consoleHandle, cursorPosition);
                     }
                 }
             }
-//            void drawObjects() {
-//                initscr(); // Initialize ncurses
-//                raw(); // Disable line buffering
-//                keypad(stdscr, TRUE); // Enable special key handling
-//                noecho(); // Don't echo input
-//
-//                int rows, cols;
-//                getmaxyx(stdscr, rows, cols); // Get terminal size
-//
-//                double maxDistance = 0.0;
-//                for (const auto& row : canvas.distances) {
-//                    for (double distance : row) {
-//                        if (distance > maxDistance) {
-//                            maxDistance = distance;
-//                        }
-//                    }
-//                }
-//
-//                for (int i = 0; i < rows; ++i) {
-//                    for (int j = 0; j < cols; ++j) {
-//                        double distance = canvas.distances[i][j];
-//                        char symbol;
-//
-//                        if (distance <= 0.0) {
-//                            symbol = '#'; // Object is close
-//                        } else {
-//                            double normalizedDistance = distance / maxDistance;
-//                            if (normalizedDistance < 0.25) {
-//                                symbol = ' ';
-//                            } else if (normalizedDistance < 0.5) {
-//                                symbol = '.';
-//                            } else if (normalizedDistance < 0.75) {
-//                                symbol = '-';
-//                            } else {
-//                                symbol = '=';
-//                            }
-//                        }
-//
-//                        mvaddch(i, j, symbol);
-//                    }
-//                }
-//
-//                refresh(); // Refresh the screen
-//                getch(); // Wait for user input
-//                endwin(); // End ncurses
-//            }
         };
 
         class Configuration{
@@ -553,28 +521,27 @@ namespace Entities {
     };
 }
 
-
-int main(){
-    /*
-     * To create a scene, we need to:
-     * 1) create an Ellipsoid (for example), here it is added to EntitiesList
-     * 2) create a Camera
-     * 3) create a Console
-     * 4) draw
-     */
-
-    Entities::Game::HyperEllipsoid HE(Point(Vector({4,4,4})), Vector({5,5,5}), {Vector({6, 0, 0}), Vector({0, 6, 0}), Vector({0, 0, 6})});
-    //Entities::Entity* ent = &HE;
-
-    Entities::Game::Camera camera(60, INT_MAX);
-    auto q = Entities::Entities_List;
-    camera.position = Point(Vector({0,0,0}));
-    camera.direction = Vector({1,1,1});
-    camera.cs.basis.get_basis_coordinates(camera.direction);
-    vector<vector<Entities::Ray>> Q = camera.get_rays_matrix(100, 40);
-    Entities::Game::Canvas console(100,40);
-    console.update(camera, HE);
-    //cout << HP.intersection_distance(Entities::Ray(HP.cs, Point(Vector({0,0,0})), Vector({1,2,1})));
-    //console.distances.print();
-    Entities::Game::Console::DrawObjects(console.distances.matrix);
-}
+//int main(){
+//    /*
+//     * To create a scene, we need to:
+//     * 1) create an Ellipsoid (for example), here it is added to EntitiesList
+//     * 2) create a Camera
+//     * 3) create a Console
+//     * 4) draw
+//     */
+//
+//    Entities::Game::HyperEllipsoid HE(Point(Vector({4,4,4})), Vector({5,5,5}), {Vector({6, 0, 0}), Vector({0, 6, 0}), Vector({0, 0, 6})});
+//    //Entities::Entity* ent = &HE;
+//
+//    Entities::Game::Camera camera(60, INT_MAX);
+//    auto q = Entities::Entities_List;
+//    camera.position = Point(Vector({0,0,0}));
+//    camera.direction = Vector({1,1,1});
+//    camera.cs.basis.get_basis_coordinates(camera.direction);
+//    vector<vector<Entities::Ray>> Q = camera.get_rays_matrix(100, 40);
+//    Entities::Game::Canvas console(100,40);
+//    console.update(camera, HE);
+//    //cout << HP.intersection_distance(Entities::Ray(HP.cs, Point(Vector({0,0,0})), Vector({1,2,1})));
+//    //console.distances.print();
+//    Entities::Game::Console::drawObjects();
+//}

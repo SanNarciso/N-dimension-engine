@@ -1,0 +1,74 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine/EventSystem.h
+vector
+-
+string
+-
+unordered_map
+-
+functional
+-
+any
+-
+
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/Entities.h
+set
+-
+windows.h
+-
+string
+-
+map
+-
+any
+-
+../Math/base.h
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Math/base.h
+../../Engine/EventSystem.h
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine/EventSystem.h
+random
+-
+chrono
+-
+algorithm
+-
+unordered_map
+-
+functional
+-
+cmath
+-
+
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Exceptions/math_exceptions.cpp
+iostream
+-
+string
+-
+
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Math/base.h
+iostream
+-
+cmath
+-
+vector
+-
+algorithm
+-
+string
+-
+random
+-
+../Exceptions/math_exceptions.cpp
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Exceptions/math_exceptions.cpp
+
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/main.cpp
+lib/Engine/Entities.h
+C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/Entities.h
+

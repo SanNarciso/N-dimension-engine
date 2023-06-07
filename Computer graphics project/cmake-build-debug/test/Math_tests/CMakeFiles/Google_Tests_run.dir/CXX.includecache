@@ -419,6 +419,12 @@ vector
 -
 string
 -
+unordered_map
+-
+functional
+-
+any
+-
 
 C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/lib/Engine/Entities.h
 set
@@ -436,6 +442,10 @@ C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project
 ../../Engine/EventSystem.h
 C:/University/IV/N-dimension-engine/N-dimension-engine/Computer graphics project/Engine/EventSystem.h
 random
+-
+chrono
+-
+algorithm
 -
 unordered_map
 -
