@@ -1,4 +1,3 @@
-#pragma once
 #include "lib/Engine/Entities.h"
 
 int main(){
@@ -10,18 +9,16 @@ int main(){
      * 4) draw
      */
 
-    Entities::Game::HyperEllipsoid HE(Point(Vector({1000,1000,1000})), Vector({0.1,0.1,0.1}), {Vector({0.3, 0, 0}), Vector({0, 0.3, 0}), Vector({0, 0, 0.3})});
-    //Entities::Entity* ent = &HE;
-
-    Entities::Game::Camera camera(60, INT_MAX);
+    Entities::Game::HyperEllipsoid HE(Point(Vector({2,2,0})), Vector({1,1,1}), {Vector({0.5, 0, 0}), Vector({0, 0.5, 0}), Vector({0, 0, 0.5})});
+    //Entities::Entity* ent = &HE;s
+    Entities::Game::Camera camera(60, 20);
     auto q = Entities::Entities_List;
     camera.position = Point(Vector({0,0,0}));
-    camera.direction = Vector({1,1,1});
+    camera.direction = Vector({1,1,0});
     camera.cs.basis.get_basis_coordinates(camera.direction);
-    vector<vector<Entities::Ray>> Q = camera.get_rays_matrix(40, 40);
-    Entities::Game::Canvas console(camera, 40,40);
+    vector<vector<Entities::Ray>> Q = camera.get_rays_matrix(20, 80); // 50, 200
+    Entities::Game::Canvas console(camera, 20,80);
     console.update(HE);
-    //cout << HP.intersection_distance(Entities::Ray(HP.cs, Point(Vector({0,0,0})), Vector({1,2,1})));
-    console.distances.print(); // trouble's here
-    //console.drawObjects(HE);
+    //console.distances.print(); // trouble's here
+    console.drawObjects(HE);
 }

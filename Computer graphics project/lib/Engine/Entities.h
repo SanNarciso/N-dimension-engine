@@ -409,7 +409,7 @@ namespace Entities {
             int m;
             Matrix distances = Matrix(1920, 1080);
             Camera cam;
-            string charmap = ".:!/r(l1Z4H9W8$@";
+            string charmap = ".:;><+r*zsvfwqkP694VOGbUAKXH8RD#$B0MNWQ%&@";
             Canvas(Camera camera, int nn = 1920, int mm = 1080) {
                 n = nn;
                 m = mm;
@@ -447,56 +447,69 @@ namespace Entities {
                 }
             }
 
-            void createConsoleWindow(int width, int height) {
-                HWND consoleHandle = GetConsoleWindow();
-                RECT r;
-                GetWindowRect(consoleHandle, &r);
-                MoveWindow(consoleHandle, r.left, r.top, width, height, TRUE);
-            }
 
-            void drawObjects(HyperEllipsoid obj) {
-                auto tp1 = chrono::system_clock::now();
-                auto tp2 = chrono::system_clock::now();
-                createConsoleWindow(m, n);
+            void drawObjects(Entities::Game::HyperEllipsoid obj) {
 
-                while (1)
-                {
-                    tp2 = chrono::system_clock::now();
-                    chrono::duration<float> elapsedTime = tp2 - tp1;
-                    tp1 = tp2;
-                    float fElapsedTime = elapsedTime.count();
+                while (1){
                     if (GetAsyncKeyState((unsigned short)'A') & 0x8000) {
-                        cam.position.coordinates[1] -= 0.75f * fElapsedTime;
+                        cam.position.coordinates[1] -= 0.25f;
                         (*this).update(obj);
                     }
 
                     // Handle CW Rotation
                     if (GetAsyncKeyState((unsigned short)'D') & 0x8000) {
-                        cam.position.coordinates[1] += 0.75f * fElapsedTime;
+                        cam.position.coordinates[1] += 0.25f;
                         (*this).update(obj);
                     }
 
                     // Handle Forwards movement & collision
                     if (GetAsyncKeyState((unsigned short)'W') & 0x8000) {
-                        cam.position.coordinates[0] += 0.75f * fElapsedTime;
+                        cam.position.coordinates[0] += 0.25f;
                         (*this).update(obj);
                     }
 
                     // Handle backwards movement & collision
                     if (GetAsyncKeyState((unsigned short)'S') & 0x8000) {
-                        cam.position.coordinates[0] -= 0.75f * fElapsedTime;
+                        cam.position.coordinates[0] -= 0.25f;
                         (*this).update(obj);
                     }
+
+                    if (GetAsyncKeyState(VK_UP) & 0x8000) {
+                        cam.position.coordinates[2] += 0.25f;
+                        (*this).update(obj);
+                    }
+                    if (GetAsyncKeyState(VK_DOWN) & 0x8000) {
+                        cam.position.coordinates[2] -= 0.25f;
+                        (*this).update(obj);
+                    }
+
+//                    if (GetAsyncKeyState((unsigned short)'W') & 0x8000){
+//                        Vector move_dir({0,0,0});
+//                        move_dir = cam.direction*0.25;
+//                        cam.cs.basis.get_basis_coordinates(move_dir);
+//                        Point new_pos = cam.position + move_dir;
+//                        cam.position = new_pos;
+//                        (*this).update(obj);
+//                    }
+
 
                     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
                     COORD cursorPosition = { 0, 0 };
                     DWORD written;
 
+                    cam.position.print();
+
                     for (int i = 0; i < n; i++) {
                         for (int j = 0; j < m; j++) {
-                            int index = static_cast<int>((distances.matrix[i][j] / 10.0f) * (charmap.size() - 1));
-                            char character = charmap[index];
-                            WriteConsoleA(consoleHandle, &character, 1, &written, NULL);
+                            char pixel = ' ';
+                            if (distances.matrix[i][j] == cam.draw_distance) {pixel = ' ';}
+                            else {
+                                //int index = static_cast<int>((distances.matrix[i][j] / 10.0f) * (charmap.size() - 1));
+                                int color = (int)(cam.draw_distance/distances.matrix[i][j]);
+                                if (color > charmap.size()) color = charmap.size() - 1;
+                                pixel = charmap[color];
+                            }
+                            WriteConsoleA(consoleHandle, &pixel, 1, &written, NULL);
                         }
                         cursorPosition.Y++;
                         SetConsoleCursorPosition(consoleHandle, cursorPosition);
@@ -520,28 +533,3 @@ namespace Entities {
         }
     };
 }
-
-//int main(){
-//    /*
-//     * To create a scene, we need to:
-//     * 1) create an Ellipsoid (for example), here it is added to EntitiesList
-//     * 2) create a Camera
-//     * 3) create a Console
-//     * 4) draw
-//     */
-//
-//    Entities::Game::HyperEllipsoid HE(Point(Vector({4,4,4})), Vector({5,5,5}), {Vector({6, 0, 0}), Vector({0, 6, 0}), Vector({0, 0, 6})});
-//    //Entities::Entity* ent = &HE;
-//
-//    Entities::Game::Camera camera(60, INT_MAX);
-//    auto q = Entities::Entities_List;
-//    camera.position = Point(Vector({0,0,0}));
-//    camera.direction = Vector({1,1,1});
-//    camera.cs.basis.get_basis_coordinates(camera.direction);
-//    vector<vector<Entities::Ray>> Q = camera.get_rays_matrix(100, 40);
-//    Entities::Game::Canvas console(100,40);
-//    console.update(camera, HE);
-//    //cout << HP.intersection_distance(Entities::Ray(HP.cs, Point(Vector({0,0,0})), Vector({1,2,1})));
-//    //console.distances.print();
-//    Entities::Game::Console::drawObjects();
-//}
