@@ -417,8 +417,6 @@ namespace Entities {
                 cam = camera;
             }
 
-             //void draw(){}/// NCURSES, DRAWING EVERYTHING
-
              void update(HyperEllipsoid object){
                 /*
                  * what is needed to be done here?
@@ -448,38 +446,35 @@ namespace Entities {
             }
 
 
-            void drawObjects(Entities::Game::HyperEllipsoid obj) {
+            void drawObjects(Entities::Game::HyperEllipsoid obj, float delta) {
 
                 while (1){
                     if (GetAsyncKeyState((unsigned short)'A') & 0x8000) {
-                        cam.position.coordinates[1] -= 0.25f;
+                        cam.position.coordinates[1] -= delta;
                         (*this).update(obj);
                     }
 
-                    // Handle CW Rotation
                     if (GetAsyncKeyState((unsigned short)'D') & 0x8000) {
-                        cam.position.coordinates[1] += 0.25f;
+                        cam.position.coordinates[1] += delta;
                         (*this).update(obj);
                     }
 
-                    // Handle Forwards movement & collision
                     if (GetAsyncKeyState((unsigned short)'W') & 0x8000) {
-                        cam.position.coordinates[0] += 0.25f;
+                        cam.position.coordinates[0] += delta;
                         (*this).update(obj);
                     }
 
-                    // Handle backwards movement & collision
                     if (GetAsyncKeyState((unsigned short)'S') & 0x8000) {
-                        cam.position.coordinates[0] -= 0.25f;
+                        cam.position.coordinates[0] -= delta;
                         (*this).update(obj);
                     }
 
                     if (GetAsyncKeyState(VK_UP) & 0x8000) {
-                        cam.position.coordinates[2] += 0.25f;
+                        cam.position.coordinates[2] += delta;
                         (*this).update(obj);
                     }
                     if (GetAsyncKeyState(VK_DOWN) & 0x8000) {
-                        cam.position.coordinates[2] -= 0.25f;
+                        cam.position.coordinates[2] -= delta;
                         (*this).update(obj);
                     }
 
@@ -501,14 +496,22 @@ namespace Entities {
 
                     for (int i = 0; i < n; i++) {
                         for (int j = 0; j < m; j++) {
-                            char pixel = ' ';
-                            if (distances.matrix[i][j] == cam.draw_distance) {pixel = ' ';}
-                            else {
-                                //int index = static_cast<int>((distances.matrix[i][j] / 10.0f) * (charmap.size() - 1));
-                                int color = (int)(cam.draw_distance/distances.matrix[i][j]);
-                                if (color > charmap.size()) color = charmap.size() - 1;
-                                pixel = charmap[color];
+//                            char pixel = ' ';
+//                            if (distances.matrix[i][j] == cam.draw_distance) {pixel = ' ';}
+//                            else {
+//                                //int index = static_cast<int>((distances.matrix[i][j] / 10.0f) * (charmap.size() - 1));
+//                                int color = (int)(cam.draw_distance/distances.matrix[i][j]);
+//                                if (color > charmap.size()) color = charmap.size() - 1;
+//                                pixel = charmap[color];
+//                            }
+                            constexpr int numCharacters = sizeof(charmap) - 1;
+                            char pixel = '.';
+                            if (distances.matrix[i][j] >= cam.draw_distance) {
+                                pixel = charmap[0]; // Farthest distance represented by the last ASCII character
                             }
+                            double range = cam.draw_distance / numCharacters;
+                            int index = std::round(distances.matrix[i][j] / range);
+                            pixel = charmap[index];
                             WriteConsoleA(consoleHandle, &pixel, 1, &written, NULL);
                         }
                         cursorPosition.Y++;
